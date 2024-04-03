@@ -4,7 +4,7 @@ import CustomerAddressChangedEvent from '../customer-address-changed.event';
 export default class SendConsoleLogHandler
 	implements EventHandlerInterface<CustomerAddressChangedEvent>
 {
-	handle(event: any): void {
+	handle(event: CustomerAddressChangedEvent): void {
 		const clientId = event.eventData.customerId;
 		const clientName = event.eventData.customerName;
 		const clientAddress = event.eventData.customerAddress;
